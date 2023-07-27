@@ -30,18 +30,36 @@ class _MyHomePageState extends StatelessWidget {
         title: const Text('tute'),
         centerTitle: true,
       ),
-      body: Center(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Text('Hey Welcome'),
-          IconButton(
-              onPressed: () {
-                print('text');
-              },
-              icon: const Icon(Icons.add)),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          const Text('Hellow Meow'),
+          ElevatedButton(
+            onPressed: () {
+              print('red');
+            },
+            style: ElevatedButton.styleFrom(backgroundColor: Colors.amber),
+            child: const Text('Click Me'),
+          ),
+          Container(
+            color: Colors.red,
+            padding: const EdgeInsets.all(30.0),
+            child: const Text('Container is me'),
+          )
         ],
-      )),
+      ),
+      // body: Center(
+      //     child: Column(
+      //   mainAxisAlignment: MainAxisAlignment.center,
+      //   children: [
+      //     const Text('Hey Welcome'),
+      //     IconButton(
+      //         onPressed: () {
+      //           print('text');
+      //         },
+      //         icon: const Icon(Icons.cabin_rounded)),
+      //   ],
+      // )),
 
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.cyan[100],
